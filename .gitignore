@@ -1,0 +1,5 @@
+.gitignore:
+*.suo/
+.vs/
+[Bb]in/
+[Oo]bj/
