@@ -7,6 +7,7 @@ using System.ComponentModel;
 
 namespace PetManager {
     public class Person {
+        //Das ist die Personenklasse
         public Person() {
             this.Pets = new BindingList<Pet>();
         }
