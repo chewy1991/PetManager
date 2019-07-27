@@ -22,7 +22,6 @@ namespace PetManager {
                 {
                     years--;
                 }
-
                 return years;
             }
         }
