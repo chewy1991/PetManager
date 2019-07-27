@@ -8,21 +8,15 @@ namespace PetManager {
     public class Pet {
         public string Name { get; set; }
         public string Breed { get; set; }
-        public DateTime Birthday { get; set; }
-        
-        public int Age
-        {
-            get
-            {
-                int years = DateTime.Now.Year - Birthday.Year;
-                DateTime help = Birthday;
-                help = help.AddYears(years);
-                if (DateTime.Now.CompareTo(help) < 0)
-                {
-                    years--;
-                }
 
-                return years;
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 23 + (this.Name != null ? this.Name.GetHashCode() : 0);
+                hash = hash * 23 + (this.Breed != null ? this.Breed.GetHashCode() : 0);
+                return hash;
             }
         }
     }
