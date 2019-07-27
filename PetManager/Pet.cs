@@ -17,6 +17,7 @@ namespace PetManager {
                 int years = DateTime.Now.Year - Birthday.Year;
                 DateTime help = Birthday;
                 help = help.AddYears(years);
+
                 if (DateTime.Now.CompareTo(help) < 0)
                 {
                     years--;
